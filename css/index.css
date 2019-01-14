@@ -1,3 +1,292 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/*http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ font-size: 100%;
+ font: inherit;
+ vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+ display: block;
+}
+body {
+ line-height: 1;
+}
+
+blockquote, q {
+ quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content: '';
+ content: none;
+}
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+ box-sizing: border-box;
+}
+
+html, body {
+ max-height: 100%;
+ font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+/* font-family: 'Playfair Display', serif; */
+font-family: 'Dosis', sans-serif;
+ letter-spacing: 1px;
+ margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+/* body {
+ padding: 0 20%;
+} */
+
+.container{
+ display:flex;
+ margin:0 auto;
+ flex-direction: column;
+ justify-content: center;
+ width:70%;
+}
+header {
+ display: flex;
+ flex-flow: wrap;
+ justify-content: space-between;
+ padding-top:30px;
+ background-color: #e0e2e4;
+ position: sticky; /* Set the navbar to fixed position */
+ top: 0; /* Position the navbar at the top of the page */
+ width:100%;
+ padding-bottom: 20px;
+}
+
+nav {
+ display:flex;
+ flex-wrap: wrap;
+}
+
+
+a {
+ padding: 30px;
+ color:gray;
+ text-decoration: none;
+}
+
+.section-two {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-evenly;
+ margin: 30px 0px;
+}
+
+.section-two-left, .section-two-right {
+ width: 400px;
+ 
+}
+
+.section-two-left {
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+.text-mod {
+ font-family: Georgia, 'Times New Roman', Times, serif;
+ font-style: italic;
+ margin-top:20px;
+ margin-left:90px;
+ font-size:50px;
+}
+.text-mod2{
+ border: 1px solid black;
+ margin-top: 50px;
+ margin-left:100px;
+ margin-right:50px;
+ padding:10px;
+ margin-bottom: 30px;
+ text-align: center;
+ }
+
+.section-three {
+ display:flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+}
+.section-four {
+ display:flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+}
+
+.section-four-right, .section-four-middle, .section-four-left{
+ width: 300px;
+ padding:30px 0px;  
+ 
+}
+.section-three-left, .section-three-right {
+ width:500px;
+ padding:30px 0px;  
+}
+
+.adress-section {
+ display:flex;
+ flex-direction: column;
+}
+.adress-style {
+ margin-top: 20px;
+}
+
+.paragraph-center {
+ margin:0 auto;
+ margin-top:40px;
+ margin-bottom: 50px;
+}
+
+@media (max-width:800px) {
+ html,body {
+     width:100%;
+ }
+
+ header{
+     display: flex;
+     flex-direction: column-reverse;
+     background-color: white;
+ }
+
+ nav {
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .header-section {
+     padding: 3%;
+ }
+
+ .logo {
+     width: 40%;
+     align-self: center;
+ }
+
+ #section-two-right {
+     display:none;
+ }
+
+ .section-four-right, .section-four-middle, .section-four-left{
+     width: 30%;
+ }
+ .section-three-left, .section-three-right {
+     width:45%; 
+ }
+ .section-two{
+     width:80%;
+ }
+     
+}
+
+@media (max-width:500px) {
+
+
+ .container{
+     border:1px solid grey;
+     width:100%;
+    
+ }
+ header{
+     display: flex;
+     position:relative;
+     flex-direction: column-reverse;
+     background-color: white;
+    
+ }
+
+ nav {
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     width:100%;
+     border-bottom: 1px solid grey;
+     margin-top:10px;
+ }
+
+ .header-section {
+     border-top: 1px solid grey;
+     width:100%;
+     text-align: center;
+     font-size: 25px;
+     color:grey;
+ }
+
+ .logo {
+     width: 60%;
+     align-self: center;
+ }
+
+ .middle-img{
+     margin:5%;
+     height: 100px;
+ }
+ .section-two,.section-three-left, .section-three-right, .section-four-right, .section-four-middle, .section-four-left {
+  width:100%; 
+  margin: 2%;
+ }
+
+ .section-three, .section-four{
+     display:flex;
+     flex-direction: column;
+     margin:10px;
+ }
+
+ .section-two {
+     margin:0 auto;
+     width:100%;
+     border-bottom: 1px solid black;
+ }
+
+ .section-four {
+     margin:0 auto;
+     width:100%;
+     border-bottom: 1px solid black;
+ }
+
+ .adress-section {
+     padding-top:50px;
+     margin:10px;
+ }
+}
+
+
+
 
